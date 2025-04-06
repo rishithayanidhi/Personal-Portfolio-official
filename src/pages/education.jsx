@@ -29,7 +29,7 @@ const educationData = [
 
 const Education = () => {
   return (
-    <section className="bg-[#e9f0fe] w-full min-h-screen flex items-center py-16 px-0">
+    <section className="w-full min-h-screen flex items-center py-16 px-0">
       <div className="mx-auto flex flex-col items-center w-full">
         {/* Heading */}
         <div className="flex items-center mb-10">
@@ -45,7 +45,7 @@ const Education = () => {
           {educationData.map((edu, index) => (
             <div
               key={index}
-              className="bg-white p-6 rounded-xl shadow-md border-l-8 border-purple-700 flex items-start"
+              className="bg-white p-6 rounded-2xl shadow-2xl border border-gray-300 border-l-8 border-purple-700 flex items-start"
             >
               <div className="text-purple-700 text-3xl mt-1 mr-4">
                 <FaGraduationCap />

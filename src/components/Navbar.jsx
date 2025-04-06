@@ -4,7 +4,7 @@ import { Moon, Sun } from "lucide-react";
 
 export default function Navbar() {
   return (
-    <nav className="p-4 bg-transparent shadow-md">
+    <nav className="p-4 bg-transparent shadow-2xl">
       <div className="container mx-auto px-8 flex justify-between items-center">
         
         {/* Navbar Title */}
