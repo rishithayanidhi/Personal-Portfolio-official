@@ -14,7 +14,7 @@ export default function Navbar() {
 
         {/* Navbar Links */}
         <ul className="flex space-x-6 text-black font-medium text-base font-[Ubuntu]">
-          {["Home", "About", "Skills", "Education", "Projects", "Contact"].map((item, index) => (
+          {[ "About", "Skills", "Education", "Projects", "Contact"].map((item, index) => (
             <li key={index}>
               <Link to={`/${item.toLowerCase()}`} className="hover:text-orange-500 hover: transition duration-300">
                 {item}.

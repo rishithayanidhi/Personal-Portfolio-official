@@ -14,7 +14,7 @@ function App() {
       <Navbar />
       <div className="min-h-screen flex flex-col items-center justify-center bg-black-900">
         <Routes>
-          <Route path="/Home" element={<Home />} />
+          <Route path="/" element={<Home />} />
           <Route path="/About" element={<About />} />
           <Route path="/Skills" element={<Skills />} />
           <Route path="/Education" element={<Education/>} />
