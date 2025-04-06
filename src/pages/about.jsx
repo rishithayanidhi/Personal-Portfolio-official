@@ -1,5 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";  
+import profileImage from "../assets/me.jpg"; 
+
 
 const About = () => {
   return (
@@ -32,11 +34,9 @@ const About = () => {
       transition={{ duration: 0.5 }}
     ></motion.div>
 
-    <img
-      src="logo/me.jpg"
-      alt="Profile"
-      className="w-full h-full object-cover"
-    />
+    <img src={profileImage} alt="Profile" className="w-full h-full object-cover" />
+
+
   </motion.div>
 
   {/* About Details */}
