@@ -24,12 +24,12 @@ const About = () => {
 <div className="flex flex-col md:flex-row items-center justify-center gap-10 md:gap-25 max-w-5xl relative z-10 md:-mr-30">
   {/* Holographic Profile Picture */}
   <motion.div
-    className="relative rounded-xl overflow-hidden shadow-2xl shadow-cyan-500/50 w-72 h-72 md:w-80 md:h-80 bg-[#111] cursor-pointer"
-    whileHover={{ scale: 1.05, boxShadow: "0 0 20px rgba(0,255,255,0.5)" }} // Zoom & glow effect on hover
+    className="relative rounded-xl overflow-hidden shadow-2xl shadow-red-500/50 w-72 h-72 md:w-80 md:h-80 bg-[#111] cursor-pointer"
+    whileHover={{ scale: 1.05, boxShadow: "0 0 20px rgb(165, 42, 42)" }} // Zoom & glow effect on hover
   >
     {/* Holographic Gradient Overlay */}
     <motion.div
-      className="absolute inset-0 bg-gradient-to-br from-cyan-400 to-transparent opacity-0"
+      className="absolute inset-0 bg-gradient-to-br from-red-400 to-transparent opacity-0"
       whileHover={{ opacity: 1, y: "100%" }} // Moving holographic effect
       transition={{ duration: 0.5 }}
     ></motion.div>
