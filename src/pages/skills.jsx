@@ -1,83 +1,56 @@
-<section className="py-16 px-4 md:px-20">
-  <h2 className="text-4xl font-bold mb-12 text-center">My Skills</h2>
+const skills = [
+  { name: 'Java', icon: '/icons/java.svg', percent: 88 },
+  { name: 'JavaScript', icon: '/icons/javascript.svg', percent: 92 },
+  { name: 'TypeScript', icon: '/icons/typescript.svg', percent: 85 },
+  { name: 'NodeJS', icon: '/icons/nodejs.svg', percent: 88 },
+  { name: 'ExpressJS', icon: '/icons/express.svg', percent: 85 },
+  { name: 'DSA', icon: '/icons/dsa.svg', percent: 80 },
+  { name: 'Git', icon: '/icons/git.svg', percent: 90 },
+  { name: 'REST API', icon: '/icons/api.svg', percent: 85 },
+  { name: 'HTML5', icon: '/icons/html5.svg', percent: 95 },
+  { name: 'CSS3', icon: '/icons/css3.svg', percent: 90 },
+  { name: 'ReactJS', icon: '/icons/react.svg', percent: 93 },
+  { name: 'Postman', icon: '/icons/postman.svg', percent: 85 },
+  { name: 'Python', icon: '/icons/python.svg', percent: 90 },
+  { name: 'C++', icon: '/icons/cpp.svg', percent: 82 },
+  { name: 'C', icon: '/icons/c.svg', percent: 80 },
+  { name: 'Firebase', icon: '/icons/firebase.svg', percent: 82 },
+  { name: 'MongoDB', icon: '/icons/mongodb.svg', percent: 87 },
+  { name: 'MySQL', icon: '/icons/mysql.svg', percent: 85 },
+];
 
-  {/* Technical Skills Grid */}
-  <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-    {[
-      { name: 'HTML', percent: 95 },
-      { name: 'CSS', percent: 90 },
-      { name: 'Tailwind CSS', percent: 90 },
-      { name: 'JavaScript', percent: 92 },
-      { name: 'TypeScript', percent: 85 },
-      { name: 'React', percent: 93 },
-      { name: 'Node.js', percent: 88 },
-      { name: 'Express.js', percent: 85 },
-      { name: 'Git', percent: 90 },
-      { name: 'GitHub', percent: 90 },
-      { name: 'Postman', percent: 85 },
-      { name: 'Linux (Ubuntu)', percent: 80 },
-      { name: 'MySQL', percent: 85 },
-      { name: 'MongoDB', percent: 87 },
-      { name: 'Firebase', percent: 82 },
-      { name: 'C', percent: 80 },
-      { name: 'Python', percent: 90 },
-      { name: 'Java', percent: 88 },
-    ].map((skill, idx) => (
-      <div
-        key={idx}
-        className="group relative flex flex-col items-center justify-center p-4"
-      >
-        <div className="w-24 h-24 rounded-full border-4 border-blue-400 flex items-center justify-center relative transition-transform group-hover:scale-105">
-          <span className="text-sm font-bold">{skill.name}</span>
-          <svg
-            className="absolute top-0 left-0 w-full h-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-            viewBox="0 0 100 100"
+const Skills = () => {
+  return (
+    <section className="w-screen h-screen py-16 px-4 md:px-20 bg-gradient-to-b from-purple-800 to-purple-900 text-white overflow-y-auto">
+      <h2 className="text-4xl font-bold mb-12 text-center">
+        <span className="text-white">Skills & </span>
+        <span className="text-yellow-400">Abilities</span>
+      </h2>
+
+      <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
+        {skills.map((skill, idx) => (
+          <div
+            key={idx}
+            className="bg-[#0e0e2c] p-4 rounded-lg flex flex-col items-center justify-center shadow-md hover:shadow-lg transition group"
           >
-            <circle
-              cx="50"
-              cy="50"
-              r="36"
-              stroke="rgba(0, 0, 0, 0.1)"
-              strokeWidth="8"
-              fill="none"
+            <img
+              src={skill.icon}
+              alt={skill.name}
+              className="w-12 h-12 mb-3 object-contain"
             />
-            <circle
-              cx="50"
-              cy="50"
-              r="36"
-              stroke="#2563EB"
-              strokeWidth="8"
-              fill="none"
-              strokeDasharray="226"
-              strokeDashoffset={226 - (226 * skill.percent) / 100}
-              strokeLinecap="round"
-            />
-          </svg>
-        </div>
-        <div className="mt-2 text-center text-sm font-semibold">{skill.name}</div>
-      </div>
-    ))}
-  </div>
+            <p className="text-sm font-medium mb-2">{skill.name}</p>
 
-  {/* Soft Skills */}
-  <div className="mt-20">
-    <h3 className="text-3xl font-semibold mb-8 text-center">Soft Skills</h3>
-    <div className="grid grid-cols-2 md:grid-cols-3 gap-6 text-center">
-      {[
-        'Team Collaboration',
-        'Problem Solving',
-        'Time Management',
-        'Leadership',
-        'Adaptability',
-        'Communication',
-      ].map((skill, index) => (
-        <div
-          key={index}
-          className="text-lg font-medium transition-transform duration-300 hover:scale-105 hover:text-blue-700"
-        >
-          {skill}
-        </div>
-      ))}
-    </div>
-  </div>
-</section>
+            <div className="w-full h-2 bg-gray-700 rounded overflow-hidden mt-1 opacity-0 group-hover:opacity-100 transition duration-300">
+              <div
+                className="h-full bg-blue-500"
+                style={{ width: `${skill.percent}%` }}
+              ></div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+};
+
+export default Skills;
