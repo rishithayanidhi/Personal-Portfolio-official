@@ -72,19 +72,36 @@ const About = () => {
 
     {/* Resume Button */}
     <div className="mt-5">
-      <a
-        href="https://drive.google.com/file/d/1Ct55z2MGiVAMddmwgJLC2IiY82vUAmDt/view"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <button
-          className="cursor-pointer mt-6 bg-[#2506ad] text-white font-semibold py-3 px-8 rounded-lg shadow-lg hover:bg-blue-950 transition duration-200"
-          style={{ boxShadow: "0px 5px 10px rgba(48, 68, 247, 0.6)" }}
-        >
-          Resume ›
-        </button>
-      </a>
-    </div>
+  <a
+    href="https://drive.google.com/file/d/1Ct55z2MGiVAMddmwgJLC2IiY82vUAmDt/view"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <button
+      className="group cursor-pointer mt-6 bg-[#2506ad] text-white font-semibold py-3 px-8 rounded-lg transition-transform duration-300 transform hover:scale-105 hover:shadow-xl"
+      style={{ boxShadow: "0px 5px 10px rgba(48, 68, 247, 0.6)" }}
+    >
+      <span className="inline-flex items-center gap-1">
+        {/* Per-letter bouncing "Resume" */}
+        {"Resume".split("").map((char, index) => (
+          <span
+            key={index}
+            className="inline-block group-hover:animate-bounce"
+            style={{ animationDelay: `${index * 50}ms` }}
+          >
+            {char}
+          </span>
+        ))}
+
+        {/* Arrow moves to the right */}
+        <span className="transition-transform duration-300 group-hover:translate-x-2">
+          ›
+        </span>
+      </span>
+    </button>
+  </a>
+</div>
+
   </div>
 </div>
 
