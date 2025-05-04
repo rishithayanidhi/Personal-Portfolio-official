@@ -73,7 +73,7 @@ const About = () => {
     {/* Resume Button */}
     <div className="mt-5">
   <a
-    href="https://drive.google.com/file/d/1Ct55z2MGiVAMddmwgJLC2IiY82vUAmDt/view"
+    href="https://drive.google.com/file/d/1qYjngEfL8uu8TsPyC1Z31lWZx6vthHmD/view"
     target="_blank"
     rel="noopener noreferrer"
   >
